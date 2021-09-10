@@ -35,13 +35,13 @@ Do the following:
 
    HINT: no function required
 */
-var one = 10
-var two = 20
-if (one <= two){
-  one = one + 1;
-  ;
+var a = 10
+var b = 20
+if (a <= b){
+  a = a * b;
+  console.log(a)
 }
-console.log(one);
+
 
 
 
@@ -56,6 +56,9 @@ Do the following:
 
    HINT: look up the Number method
 */
+var str = "1999"
+var str = 1999
+console.log(str)
 
 
 
@@ -69,10 +72,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a, b){
+  const answer = a * b
+  return answer
 }
-
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -85,9 +88,11 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(age){
+  var dogYears = age * 7;
+  return dogYears
 }
+dogYears(10);
 
 
 
@@ -118,11 +123,24 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(weight, age){
+  if(age >= 1 && weight <= 5){
+    return weight * .05
+  }if(age >= 1 && weight > 5 && weight <= 10){
+    return weight * .04
+  }if(age >= 1 && weight > 11 && weight <= 15){
+    return weight * .03
+  }if(age >= 1 && weight > 15){
+    return weight * .02
+  }if(age >= 2/12 && age <= 4/12){
+    return weight * .10
+  }if(age >= 4/12 && age < 7/12){
+    return weight * .05
+  }if(age >= 7/12 && age < 1){
+    return weight * .04
+  }
 }
-
-
+console.log(hungryDog(4, 7/12))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -145,10 +163,27 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
-  /*add your code here*/
+function game(a, b){
+  if(a == "paper" && b == "paper"){
+    return "it's a tie"
+  }if(a == "rock" && b == "rock"){
+    return "it's a tie"
+  }if(a == "scissors" && b == "scissors"){
+    return "it's a tie"
+  }if(a == "scissors" && b == "paper"){
+    return "you win!"
+  }if(a == "scissors" && b == "rock"){
+    return "you lose!"
+  }if(a == "paper" && b == "rock"){
+    return "you win!"
+  }if(a == "paper" && b == "scissors"){
+    return "you lose!"
+  }if(a == "rock" && b == "paper"){
+    return "you lose!"
+  }if(a == "rock" && b == "scissors"){
+    return "you win!"
+  }
 }
-
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -162,8 +197,8 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(km){
+  return km * 0.621371
 }
 
 
@@ -176,8 +211,8 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+  return cm / 30.48
 }
 
 
@@ -192,8 +227,10 @@ Using the annoyingSong function below do the following:
     "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(a){
+  var bottles = a;
+  var bottlesLeft = a - 1;
+  return `${bottles} bottles of soda on the wall, ${bottles} bottles of soda, take one down pass it around ${bottlesLeft} bottles of soda on the wall`
 }
 
 
@@ -212,8 +249,19 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(score){
+if(score >= 90){
+  return "you got an A"
+}if(score >= 80 && score < 90){
+  return "you got a B"
+}if(score >= 70 && score < 80){
+  return "you got a C"
+}if(score >= 60 && score < 70){
+  return "you got a D"
+}if(score < 60){
+  return "you got an F"
+}
+
 }
 
 
